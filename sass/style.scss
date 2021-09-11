@@ -1,0 +1,290 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
+}
+
+$font-title: "Shrikhand", cursive;
+$text-desc: #353535;
+$color-primary: #9356dc;
+$color-secondary: #ff79da;
+$shadow-card: rgba(0, 0, 0, 0.25) 0px 15px 30px -12px;
+
+.header {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  &__location {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #eaeaea;
+    padding: 1rem 0;
+    box-shadow: inset 0px 20px 15px -20px #bdbcbc;
+    color: $text-desc;
+    text-shadow: 0px 0px 0px #626262;
+    > .iconlocation {
+      font-size: 16px;
+      transform: translateY(-2px) translateX(-20px);
+      color: #353535;
+      text-shadow: 0px 0px 0px #626262;
+    }
+  }
+  & img {
+    align-self: center;
+    width: 200px;
+    padding: 1.5rem 0 1rem 0;
+  }
+  &__book {
+    background-color: #f6f6f6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 2rem 3.5rem 2rem;
+    > h1 {
+      font-size: 1.8em;
+      padding: 1rem 0;
+    }
+    > p {
+      color: $text-desc;
+      font-size: 1.1em;
+    }
+  }
+  &--btn {
+    margin-top: 30px;
+    border: none;
+    border-radius: 100px;
+    font-size: 1.1em;
+    font-weight: 500;
+    background-size: 450%;
+    background-image: linear-gradient(
+      to left top,
+      $color-secondary,
+      $color-primary,
+      $color-secondary
+    );
+    color: white;
+    padding: 1.2rem 1.6rem;
+    transition: 0.3s all ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
+      rgba(0, 0, 0, 0.1) 0px 2px 4px 0px;
+    &:hover {
+      cursor: pointer;
+      background-position: right top;
+      transition: 0.3s all ease-in-out;
+      box-shadow: rgba(0, 0, 0, 0.4) 0px 12px 28px 0px,
+        rgba(0, 0, 0, 0.1) 0px 2px 4px 0px;
+    }
+  }
+}
+
+.tuto {
+  &__title {
+    margin: 3rem 1.5rem;
+  }
+  &__cards {
+    margin: 2.5rem 1rem 0 1.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__card {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    background-color: #f6f6f6;
+    padding: 1.5rem;
+    margin-top: 1rem;
+    border-radius: 20px;
+    box-shadow: $shadow-card;
+    transition: 0.2s ease-in-out;
+    &:hover {
+      cursor: pointer;
+      background-color: #9256dc1a;
+    }
+    &:hover > .tuto__card--info > i {
+      color: $color-primary;
+      transition: 0.2s ease-in-out;
+    }
+    &--number {
+      position: absolute;
+      transform: translateX(-2.2rem);
+      font-size: 12px;
+      padding: 6px 10px;
+      color: white;
+      border-radius: 50%;
+      background-color: $color-primary;
+    }
+    &--info {
+      display: flex;
+      font-weight: 500;
+      align-items: center;
+      padding-left: 1rem;
+      width: 100%;
+      > .fas {
+        color: #828282;
+        transition-duration: 0.2s;
+        font-size: 1.2em;
+      }
+      > p {
+        padding-left: 1rem;
+      }
+    }
+  }
+}
+
+.places {
+  background-color: #f6f6f6;
+  margin-top: 3rem;
+  padding: 3rem 1.5rem;
+  &__cards {
+    &--card > img {
+      width: 100%;
+      height: 190px;
+      overflow: hidden;
+      object-fit: cover;
+      border-radius: 20px 20px 0 0;
+    }
+
+    &--card > .new {
+      position: absolute;
+      padding: 0.4rem 0.8rem;
+      background-color: #99e2d0;
+      color: #1b9779;
+      border-radius: 5px;
+      top: 0.8rem;
+      right: 0.8rem;
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+        rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+        rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    }
+    &--card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      border-radius: 20px;
+      background-color: #fff;
+      margin: 2rem 0;
+      text-decoration: none;
+      color: black;
+      transition: 0.2s ease-in-out;
+      box-shadow: $shadow-card;
+      &:hover {
+        transition: 0.2s ease-in-out;
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 12px 28px 0px,
+          rgba(0, 0, 0, 0.1) 0px 2px 4px 0px;
+      }
+    }
+    &--info {
+      padding: 0.8rem;
+      line-height: 1.8rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      &--text > p {
+        color: $text-desc;
+      }
+      > .heart {
+        font-size: 1.6em;
+        padding-right: 1rem;
+        height: 18px;
+        width: 16px;
+        display: flex;
+        position: relative;
+        justify-content: center;
+
+        > .far + .fas {
+          position: absolute;
+        }
+        > .fas {
+          opacity: 0;
+          color: $color-primary;
+          transition: 0.2s ease-in-out;
+        }
+        &:hover .far {
+          opacity: 0;
+          transition-duration: 0.2s;
+        }
+        &:hover > .fas {
+          transform: scale(1.2);
+          display: flex;
+          position: absolute;
+          cursor: pointer;
+          opacity: 1;
+          transition: 0.2s ease-in-out;
+          background-image: linear-gradient(
+            to top right,
+            $color-secondary,
+            $color-primary
+          );
+          -webkit-background-clip: text;
+          -moz-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+    }
+  }
+}
+.footer {
+  background-color: #353535;
+  display: flex;
+  flex-direction: column;
+  padding: 1.8rem 1.8rem 4rem 1.8rem;
+  > h2 {
+    padding-bottom: 1rem;
+    transition-duration: 0.2s;
+    width: fit-content;
+    > a {
+      text-decoration: none;
+      width: fit-content;
+      color: white;
+      font-family: $font-title;
+      font-weight: 100;
+      font-size: 1.5em;
+    }
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.02);
+      transition-duration: 0.2s;
+      background-image: linear-gradient(
+        to right,
+        $color-secondary,
+        $color-primary
+      );
+      background-size: 100%;
+      -webkit-background-clip: text;
+      -moz-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -moz-text-fill-color: transparent;
+    }
+  }
+
+  &__link {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2em;
+    line-height: 2rem;
+    > a {
+      text-decoration: none;
+      color: white;
+      transition-duration: 0.2s;
+      width: fit-content;
+      > i {
+        font-size: 18px;
+      }
+      > .fa-utensils {
+        padding-right: 1rem;
+      }
+      > .fa-hands-helping {
+        padding-right: 0.55rem;
+      }
+      &:hover {
+        color: $color-primary;
+        transition-duration: 0.2s;
+      }
+    }
+  }
+}
