@@ -42,6 +42,31 @@ body {
   background-color: #f6f6f6;
   padding: 2.2rem 1.2rem;
   border-radius: 35px 35px 0 0;
+  margin-bottom: -60px;
+}
+.order__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.order__btn--order {
+  margin-top: 30px;
+  border: none;
+  border-radius: 100px;
+  font-size: 1.1em;
+  font-weight: 500;
+  background-size: 450%;
+  background-image: linear-gradient(to left top, #ff79da, #9356dc, #ff79da);
+  color: white;
+  padding: 1.2rem 4rem;
+  transition: 0.3s all ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px;
+}
+.order__btn--order:hover {
+  cursor: pointer;
+  background-position: right top;
+  transition: 0.3s all ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px;
 }
 .order__top {
   display: flex;
