@@ -132,6 +132,8 @@ $shadow-card: rgba(0, 0, 0, 0.25) 0px 15px 30px -12px;
           transition: 0.4s;
         }
       }
+      animation: move-card 1s cubic-bezier(0, 0, 0, 1) forwards;
+      opacity: 0;
       background-color: #fff;
       border-radius: 15px;
       padding: 1rem;
@@ -143,9 +145,19 @@ $shadow-card: rgba(0, 0, 0, 0.25) 0px 15px 30px -12px;
       position: relative;
       text-decoration: none;
       color: black;
+      margin-bottom: 1rem;
+      > .card1 {
+        animation-delay: 0.16s;
+      }
+      > .card2 {
+        animation-delay: 0.33s;
+      }
       > .price {
         font-weight: 500;
         transition: 0.4s ease-in-out;
+
+        white-space: nowrap;
+        text-overflow: ellipsis;
       }
 
       &--info {
@@ -153,10 +165,16 @@ $shadow-card: rgba(0, 0, 0, 0.25) 0px 15px 30px -12px;
         > h2 {
           font-size: 1.2em;
           font-weight: 600;
+
+          white-space: nowrap;
+          text-overflow: ellipsis;
         }
         > p {
           font-size: 1em;
           font-weight: 100;
+
+          white-space: nowrap;
+          text-overflow: ellipsis;
         }
         &--check {
           transform: translateX(70px);
@@ -168,7 +186,8 @@ $shadow-card: rgba(0, 0, 0, 0.25) 0px 15px 30px -12px;
           justify-content: center;
           align-items: center;
           background-color: $color-tertiary;
-          padding: 2.1rem 1.4rem;
+          padding: 0 1.4rem;
+          height: 100%;
           &icon {
             font-size: 0.8em;
             display: flex;
@@ -182,6 +201,16 @@ $shadow-card: rgba(0, 0, 0, 0.25) 0px 15px 30px -12px;
         }
       }
     }
+  }
+}
+
+@keyframes move-card {
+  0% {
+    opacity: 0;
+    transform: translateY(45px);
+  }
+  100% {
+    opacity: 100;
   }
 }
 // Footer
