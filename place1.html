@@ -16,19 +16,46 @@
 </head>
 <body>
     <header class="header">
-        <div class="header__head">
-        <i class="fas fa-arrow-left"></i>
+        <div class="header__top">
+        <a href="index.html" class="header__top--back"><i class="fas fa-arrow-left"></i></a>
         <img id="top" src="./src/images/logo/ohmyfood@2x.svg" alt="logo-ohmyfood">
     </div>
+        <div class="header__cover">
+            <img src="./src/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût">
+        </div>
         </header>
-
+<!-- Section commandes -->
+        <section class="order">
+            <div class="order__top">
+                <h1>La palette du goût</h1>
+                <div class="heart">
+                    <i class="far fa-heart"></i>
+                    <i class="fas fa-heart"></i>
+                </div>
+            </div>
+            <div class="repas">
+            <div class="repas__title">
+                <h2>Entrées</h2>
+                <div class="repas__title--underline"></div>
+            </div>
+                <a class="repas__card" href="">
+                    <div class="repas__card--info">
+                    <h2>Fricassée d'escargot</h2>
+                    <p>Au piment d'espelette</p>
+                </div>
+                <span class="price">25€</span>
+                <div class="repas__card--info--check"><div class="repas__card--info--checkicon"><i class="fas fa-check"></i></div></div>
+            </a>
+            </div>
+        </section>
+<!-- Footer -->
     <footer class="footer">
-        <h2><a href="#top">ohmyfood</a></h2>
+        <h2><a href="index.html">ohmyfood</a></h2>
          <div class="footer__link">
              <a href=""><i class="fas fa-utensils"></i>Proposer un restaurant</a>
              <a href=""><i class="fas fa-hands-helping"></i>Devenir partenaire</a>
              <a href="">Mentions légales</a>
-             <a href="">Contact</a>
+             <a href="mailto:contact@ohmyfood.fr">Contact</a>
          </div>
      </footer>
  </body>
