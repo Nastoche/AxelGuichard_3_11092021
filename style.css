@@ -86,6 +86,7 @@
   100% {
     opacity: 0;
     z-index: -1;
+    -webkit-transform: translate3d(0, 0, 0);
   }
 }
 @keyframes animate {
