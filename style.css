@@ -16,9 +16,11 @@
   bottom: 0;
   width: 100%;
   height: 100%;
-  background: #eaeaeaef;
-  visibility: hidden;
-  -webkit-transition: visibility 3s;
+  background: #eaeaeaf6;
+  animation: stopspin 0.01s;
+  animation-delay: 3s;
+  animation-fill-mode: both;
+  animation-duration: 0.5s;
 }
 .section > .titleloader {
   padding: 0.4rem;
@@ -77,6 +79,11 @@
   }
   100% {
     transform: rotate(-360deg);
+  }
+}
+@keyframes stopspin {
+  100% {
+    opacity: 0;
   }
 }
 @keyframes animate {

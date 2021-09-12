@@ -23,7 +23,7 @@ $shadow-card: rgba(0, 0, 0, 0.25) 0px 15px 30px -12px;
   bottom: 0;
   width: 100%;
   height: 100%;
-  background: #eaeaeaef;
+  background: #eaeaeaf6;
   > .titleloader {
     padding: 0.4rem;
     font-family: $font-title;
@@ -71,9 +71,10 @@ $shadow-card: rgba(0, 0, 0, 0.25) 0px 15px 30px -12px;
     border-top-color: $color-primary;
     animation: spinreverse 1s linear infinite;
   }
-
-  visibility: hidden;
-  -webkit-transition: visibility 3s;
+  animation: stopspin 0.01s;
+  animation-delay: 3s;
+  animation-fill-mode: both;
+  animation-duration: 0.5s;
 }
 @keyframes spin {
   0% {
@@ -89,6 +90,12 @@ $shadow-card: rgba(0, 0, 0, 0.25) 0px 15px 30px -12px;
   }
   100% {
     transform: rotate(-360deg);
+  }
+}
+
+@keyframes stopspin {
+  100% {
+    opacity: 0;
   }
 }
 
