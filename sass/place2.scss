@@ -46,6 +46,12 @@ $shadow-card: rgba(0, 0, 0, 0.25) 0px 15px 30px -12px;
       width: 100%;
       object-fit: cover;
       max-height: 550px;
+      @media screen and (max-width: 596px) {
+        max-height: 397px;
+      }
+      @media screen and (max-width: 400px) {
+        max-height: 250px;
+      }
     }
   }
 }
@@ -285,7 +291,6 @@ $shadow-card: rgba(0, 0, 0, 0.25) 0px 15px 30px -12px;
       column-gap: 5rem;
       white-space: nowrap;
       text-overflow: ellipsis;
-      overflow: hidden;
 
       // 1380px
     }

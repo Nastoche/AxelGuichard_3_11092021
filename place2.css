@@ -41,6 +41,16 @@ body {
   object-fit: cover;
   max-height: 550px;
 }
+@media screen and (max-width: 596px) {
+  .header__cover > img {
+    max-height: 397px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .header__cover > img {
+    max-height: 250px;
+  }
+}
 
 .order {
   position: relative;
@@ -262,7 +272,6 @@ body {
     column-gap: 5rem;
     white-space: nowrap;
     text-overflow: ellipsis;
-    overflow: hidden;
   }
 }
 
