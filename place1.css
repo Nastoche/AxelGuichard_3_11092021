@@ -209,9 +209,6 @@ body {
 .order .repas__card--info > .price {
   font-weight: 500;
   transition: 0.4s ease-in-out;
-  display: block;
-  white-space: nowrap;
-  text-overflow: ellipsis;
 }
 .order .repas__card--info > p {
   font-size: 1em;
@@ -242,6 +239,13 @@ body {
   background: white;
   padding: 7px 6px 6px 6px;
   border-radius: 50%;
+}
+@media screen and (min-width: 1200px) {
+  .order .menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 2rem;
+  }
 }
 
 @keyframes move-card {
