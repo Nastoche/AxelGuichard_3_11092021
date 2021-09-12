@@ -28,6 +28,7 @@ $shadow-card: rgba(0, 0, 0, 0.25) 0px 15px 30px -12px;
       font-size: 1.3em;
       text-decoration: none;
       color: $text-desc;
+      margin: auto;
     }
     > img {
       grid-column-start: 2;
@@ -311,6 +312,7 @@ $shadow-card: rgba(0, 0, 0, 0.25) 0px 15px 30px -12px;
     margin: auto;
   }
   &__link {
+    margin: auto;
     &--title {
       > h2 {
         padding: 1rem 0.5rem 1rem 0;
