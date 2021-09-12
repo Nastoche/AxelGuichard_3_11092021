@@ -5,7 +5,7 @@
   scroll-behavior: smooth;
 }
 body {
-  background-color: #f6f6f6;
+  background-color: #fff;
 }
 
 $font-title: "Shrikhand", cursive;
@@ -17,19 +17,22 @@ $shadow-card: rgba(0, 0, 0, 0.25) 0px 15px 30px -12px;
 
 .header {
   &__top {
-    display: flex;
+    display: grid;
     align-items: center;
-    justify-content: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 1440px;
+    margin: auto;
     &--back {
-      position: absolute;
-      left: 0;
+      grid-column-start: 1;
       padding: 1.5rem;
       font-size: 1.3em;
       text-decoration: none;
       color: $text-desc;
     }
     > img {
+      grid-column-start: 2;
       padding: 1.5rem 0 1rem 0;
+      margin: auto;
     }
   }
   &__cover {
@@ -37,10 +40,11 @@ $shadow-card: rgba(0, 0, 0, 0.25) 0px 15px 30px -12px;
     display: block;
     padding-top: 2rem;
     width: 100%;
+    overflow: hidden;
     > img {
-      height: 300px;
       width: 100%;
       object-fit: cover;
+      max-height: 550px;
     }
   }
 }
@@ -51,13 +55,14 @@ $shadow-card: rgba(0, 0, 0, 0.25) 0px 15px 30px -12px;
   background-color: #f6f6f6;
   padding: 2.2rem 1.2rem;
   border-radius: 35px 35px 0 0;
-  margin-bottom: -60px;
+  max-width: 1300px;
+  margin: auto auto -80px auto;
   &__btn {
     display: flex;
     justify-content: center;
     align-items: center;
     &--order {
-      margin-top: 30px;
+      margin: 5rem 0 5rem 0;
       border: none;
       border-radius: 100px;
       font-size: 1.1em;
@@ -265,11 +270,17 @@ $shadow-card: rgba(0, 0, 0, 0.25) 0px 15px 30px -12px;
     }
   }
 
+  @media screen and (min-width: 600px) and (max-width: 1380px) {
+    width: 550px;
+    margin: auto;
+    margin-bottom: -80px;
+  }
+
   .menu {
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: 1380px) {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
-      column-gap: 2rem;
+      column-gap: 5rem;
       // 1380px
     }
   }
