@@ -33,6 +33,16 @@
   color: #353535;
   text-shadow: 0px 0px 0px #626262;
 }
+@media screen and (min-width: 702px) {
+  .header__location {
+    position: absolute;
+    top: 1rem;
+    left: 2rem;
+    width: fit-content;
+    padding: 1rem 0.8rem 1rem 1.8rem;
+    border-radius: 14px;
+  }
+}
 .header__book {
   background-color: #f6f6f6;
   display: flex;
@@ -48,6 +58,11 @@
 .header__book > p {
   color: #353535;
   font-size: 1.1em;
+}
+@media screen and (min-width: 702px) {
+  .header__book {
+    box-shadow: inset 0px 20px 15px -20px #bdbcbc;
+  }
 }
 .header--btn {
   margin-top: 30px;
@@ -72,11 +87,30 @@
 .tuto__title {
   margin: 3rem 1.5rem;
 }
+@media screen and (min-width: 900px) {
+  .tuto__title {
+    display: flex;
+    justify-content: center;
+  }
+}
 .tuto__cards {
   margin: 2.5rem 1rem 0 1.2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+@media screen and (min-width: 900px) {
+  .tuto__cards {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 0.5fr 1fr 1fr 1fr 0.5fr;
+    box-sizing: border-box;
+    margin: auto;
+    max-width: 1440px;
+  }
+}
+.tuto__card1 {
+  grid-column-start: 2;
 }
 .tuto__card {
   display: flex;
@@ -88,6 +122,11 @@
   border-radius: 20px;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 15px 30px -12px;
   transition: 0.2s ease-in-out;
+}
+@media screen and (min-width: 900px) {
+  .tuto__card {
+    padding: 5rem 1rem;
+  }
 }
 .tuto__card:hover {
   cursor: pointer;
@@ -127,6 +166,10 @@
   margin-top: 3rem;
   padding: 3rem 1.5rem;
 }
+.places > h2 {
+  display: flex;
+  justify-content: center;
+}
 .places__cards--card > img {
   width: 100%;
   height: 190px;
@@ -159,6 +202,20 @@
 .places__cards--card:hover {
   transition: 0.2s ease-in-out;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px;
+}
+.places__cards--card1 {
+  grid-column-start: 2;
+}
+.places__cards--card2 {
+  grid-column-start: 3;
+}
+.places__cards--card3 {
+  grid-column-start: 2;
+  grid-row-start: 2;
+}
+.places__cards--card4 {
+  grid-column-start: 3;
+  grid-row-start: 2;
 }
 .places__cards--info {
   padding: 0.8rem;
@@ -203,19 +260,29 @@
   -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+@media screen and (min-width: 702px) {
+  .places__cards {
+    max-width: 1440px;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr 40% 40% 1fr;
+    grid-column-gap: 3rem;
+    margin: auto;
+  }
+}
 
 .footer {
   background-color: #353535;
-  display: flex;
-  flex-direction: column;
+}
+.footer__block {
   padding: 1.8rem 1.8rem 4rem 1.8rem;
 }
-.footer > h2 {
+.footer__block > h2 {
   padding-bottom: 1rem;
   transition-duration: 0.2s;
   width: fit-content;
 }
-.footer > h2 > a {
+.footer__block > h2 > a {
   text-decoration: none;
   width: fit-content;
   color: white;
@@ -223,7 +290,7 @@
   font-weight: 100;
   font-size: 1.5em;
 }
-.footer > h2:hover {
+.footer__block > h2:hover {
   cursor: pointer;
   transform: scale(1.02);
   transition-duration: 0.2s;
@@ -234,30 +301,39 @@
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
 }
-.footer__link {
+.footer__block--link {
   display: flex;
   flex-direction: column;
   font-size: 1.2em;
   line-height: 2rem;
 }
-.footer__link > a {
+.footer__block--link > a {
   text-decoration: none;
   color: white;
   transition-duration: 0.2s;
   width: fit-content;
 }
-.footer__link > a > i {
+.footer__block--link > a > i {
   font-size: 18px;
 }
-.footer__link > a > .fa-utensils {
+.footer__block--link > a > .fa-utensils {
   padding-right: 1rem;
 }
-.footer__link > a > .fa-hands-helping {
+.footer__block--link > a > .fa-hands-helping {
   padding-right: 0.55rem;
 }
-.footer__link > a:hover {
+.footer__block--link > a:hover {
   color: #9356dc;
   transition-duration: 0.2s;
+}
+@media screen and (min-width: 702px) {
+  .footer__block {
+    max-width: 1440px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
