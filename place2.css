@@ -266,7 +266,7 @@ body {
     margin-bottom: -80px;
   }
 }
-@media screen and (min-width: 1380px) {
+@media screen and (min-width: 1381px) {
   .order .menu {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
