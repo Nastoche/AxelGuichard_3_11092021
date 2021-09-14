@@ -24,7 +24,7 @@ body {
   color: #353535;
   margin: auto;
 }
-.header__top > img {
+.header__top > .logolink {
   grid-column-start: 2;
   padding: 1.5rem 0 1rem 0;
   margin: auto;
