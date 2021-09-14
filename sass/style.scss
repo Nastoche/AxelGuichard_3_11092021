@@ -5,6 +5,9 @@
   scroll-behavior: smooth;
   z-index: 10;
 }
+body {
+  min-width: 300px;
+}
 
 $font-title: "Shrikhand", cursive;
 $text-desc: #353535;

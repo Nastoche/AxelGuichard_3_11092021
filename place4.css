@@ -7,6 +7,7 @@
 
 body {
   background-color: #fff;
+  min-width: 300px;
 }
 
 .header__top {
@@ -30,9 +31,6 @@ body {
   margin: auto;
 }
 .header__cover {
-  margin-top: -2rem;
-  display: block;
-  padding-top: 2rem;
   width: 100%;
   overflow: hidden;
 }
@@ -40,6 +38,18 @@ body {
   width: 100%;
   object-fit: cover;
   max-height: 550px;
+  transition: 0.4s;
+}
+@media screen and (max-width: 600px) {
+  .header__cover > img {
+    transform: translateY(-50px);
+    transition: 0.4s;
+  }
+}
+@media screen and (min-width: 1380px) {
+  .header__cover > img {
+    object-fit: cover;
+  }
 }
 
 .order {
@@ -250,6 +260,7 @@ body {
     width: 550px;
     margin: auto;
     margin-bottom: -80px;
+    transition: 0.4s;
   }
 }
 @media screen and (min-width: 1380px) {

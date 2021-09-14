@@ -7,6 +7,7 @@
 
 body {
   background-color: #fff;
+  min-width: 300px;
 }
 
 .header__top {
@@ -30,9 +31,6 @@ body {
   margin: auto;
 }
 .header__cover {
-  margin-top: -2rem;
-  display: block;
-  padding-top: 2rem;
   width: 100%;
   overflow: hidden;
 }
@@ -40,16 +38,25 @@ body {
   width: 100%;
   object-fit: cover;
   max-height: 550px;
+  transition: 0.4s;
+}
+@media screen and (max-width: 600px) {
+  .header__cover > img {
+    transform: translateY(-20px);
+    transition: 0.4s;
+    transform: scale(1.1);
+  }
 }
 
 .order {
   position: relative;
-  transform: translateY(-80px);
+  transform: translateY(-40px);
   background-color: #f6f6f6;
   padding: 2.2rem 1.2rem;
   border-radius: 35px 35px 0 0;
   max-width: 1300px;
-  margin: auto auto -80px auto;
+  margin: auto auto -40px auto;
+  transition: 0.4s;
 }
 .order__btn {
   display: flex;
@@ -248,7 +255,14 @@ body {
 @media screen and (min-width: 600px) and (max-width: 1380px) {
   .order {
     width: 550px;
-    margin: auto;
+    transform: translateY(-80px);
+    transition: 0.4s;
+    margin-bottom: -80px;
+  }
+}
+@media screen and (min-width: 1380px) {
+  .order {
+    transform: translateY(-80px);
     margin-bottom: -80px;
   }
 }

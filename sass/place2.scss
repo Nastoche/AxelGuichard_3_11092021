@@ -6,6 +6,7 @@
 }
 body {
   background-color: #fff;
+  min-width: 300px;
 }
 
 $font-title: "Shrikhand", cursive;
@@ -37,20 +38,20 @@ $shadow-card: rgba(0, 0, 0, 0.25) 0px 15px 30px -12px;
     }
   }
   &__cover {
-    margin-top: -2rem;
-    display: block;
-    padding-top: 2rem;
     width: 100%;
     overflow: hidden;
     > img {
       width: 100%;
       object-fit: cover;
       max-height: 550px;
+      transition: 0.4s;
       @media screen and (max-width: 596px) {
         max-height: 397px;
+        transition: 0.4s;
       }
       @media screen and (max-width: 400px) {
         max-height: 250px;
+        transition: 0.4s;
       }
     }
   }
