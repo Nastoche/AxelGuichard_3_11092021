@@ -166,6 +166,9 @@ body {
 .order .repas__starter > .card9 {
   animation-delay: 2.66s;
 }
+.order .repas__starter > .card10 {
+  animation-delay: 2.99s;
+}
 .order .repas__title > h2 {
   font-size: 1.2em;
   font-weight: 100;
