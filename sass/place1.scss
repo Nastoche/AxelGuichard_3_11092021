@@ -145,6 +145,7 @@ $shadow-card: rgba(0, 0, 0, 0.25) 0px 15px 30px -12px;
       }
     }
   }
+
   .repas {
     padding-top: 2rem;
     &__starter {
@@ -294,7 +295,6 @@ $shadow-card: rgba(0, 0, 0, 0.25) 0px 15px 30px -12px;
       column-gap: 5rem;
       white-space: nowrap;
       text-overflow: ellipsis;
-
       // 1380px
     }
   }
@@ -306,12 +306,11 @@ $shadow-card: rgba(0, 0, 0, 0.25) 0px 15px 30px -12px;
   }
   100% {
     opacity: 100;
-
     transform: translateY(-45px);
   }
 }
-// Footer
 
+// Footer
 .footer {
   background-color: #353535;
   padding: 1.8rem 1.8rem 4rem 1.8rem;
